@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2088d65dd76d4a5eab5ce9eb11c4953a, type: 3}
+  m_Name: DefaultTextureColorConfig
+  m_EditorClassIdentifier: 
+  _items:
+  - name: DEFAULT_MAP
+    color: {r: 0.0627451, g: 0.0627451, b: 0.0627451, a: 1}
+  - name: DEFAULT_MAP2
+    color: {r: 0.3764706, g: 0.3764706, b: 0.3764706, a: 1}
+  - name: DEFAULT_DOCTOR
+    color: {r: 0.16078432, g: 0.09803922, b: 0.2901961, a: 1}
