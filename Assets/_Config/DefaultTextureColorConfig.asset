@@ -21,3 +21,5 @@ MonoBehaviour:
     color: {r: 0.16078432, g: 0.09803922, b: 0.2901961, a: 1}
   - name: DEFAULT_QUOTE
     color: {r: 0.054901965, g: 0.03529412, b: 0.18823531, a: 1}
+  - name: DEFAULT_OWL
+    color: {r: 0.24313726, g: 0.24313726, b: 0.24313726, a: 1}
