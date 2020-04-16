@@ -170,12 +170,12 @@ namespace UI
         private void LoadDefaultImage(int index)
         {
             /*
-         * Index == 0 is reserved for NONE value
-         */
+             * Index == 0 is reserved for NONE value
+             */
             if (index == 0)
                 return;
         
-            _settingsModel.TextureId = $"{DefaultTextures.DefaultPrefix}{_defaultImageDropdown.options[index].text.ToUpper()}";
+            _settingsModel.TextureId = $"{DefaultTextures.DefaultPrefix}{_defaultImageDropdown.options[index].text.ToUpper()}.png";
             _settingsModel.BackgroundColor = _defaultTextureColorColfig?.GetColor(_settingsModel.TextureId) ?? _settingsModel.BackgroundColor;
             Globals.SettingsHolder.UpdateSettings(_settingsModel);
             _defaultImageDropdown.value = -1;

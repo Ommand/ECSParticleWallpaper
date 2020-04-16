@@ -10,7 +10,7 @@ using Utils;
 namespace ECS.Systems
 {
     [UpdateBefore(typeof(VelocityUpdateSystem))]
-    public class AttractorAccelerationSystem : SystemBase
+    public class AccelerationSystem : SystemBase
     {
         private float2 _repulsorPrevPos = new float2(float.NaN);
     
@@ -36,7 +36,8 @@ namespace ECS.Systems
         
             var attractionPower = Globals.SettingsHolder.SettingsModel.Attraction;
             var repulsionPower = Globals.SettingsHolder.SettingsModel.Repulsion;
-            Entities.ForEach((ref AccelerationData acceleration, in AttractorPosData attractorPosition, in Translation t) =>
+            var dampingPower = Globals.SettingsHolder.SettingsModel.Damping;
+            Entities.ForEach((ref AccelerationData acceleration, in AttractorPosData attractorPosition, in Translation t, in VelocityData velocity) =>
                 {
                     var attraction = (attractorPosition.Value - t.Value.xy) * attractionPower;
 
@@ -46,7 +47,10 @@ namespace ECS.Systems
                 
                     var distSqr = math.clamp(math.distancesq(repulsorPosition, t.Value.xy), Globals.MinRepulsionDist * Globals.MinRepulsionDist, float.MaxValue);
                     var repulsion = -math.normalizesafe(repulsorPosition - t.Value.xy) / distSqr * repulsionPower;
-                    acceleration.Value = (attraction + repulsion);
+                    
+                    var damping  = -velocity.Value * dampingPower;
+                    
+                    acceleration.Value = attraction + repulsion + damping;
                 })
                 .ScheduleParallel();
         }

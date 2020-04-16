@@ -7,6 +7,5 @@ namespace TextureDataService
     {
         void Add(string id, string path);
         void LoadTexture(string id, Action<Texture2D> onComplete);
-        Texture2D LoadDefaultTexture(string id);
     }
 }

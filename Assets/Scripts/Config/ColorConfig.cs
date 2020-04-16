@@ -18,7 +18,7 @@ namespace Config
 
         public Color? GetColor(string name)
         {
-            return _items?.FirstOrDefault(item => item.name == name)?.color;
+            return _items?.FirstOrDefault(item => name.StartsWith(item.name))?.color;
         }
     }
 }

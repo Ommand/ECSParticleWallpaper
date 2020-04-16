@@ -19,3 +19,5 @@ MonoBehaviour:
     color: {r: 0.3764706, g: 0.3764706, b: 0.3764706, a: 1}
   - name: DEFAULT_DOCTOR
     color: {r: 0.16078432, g: 0.09803922, b: 0.2901961, a: 1}
+  - name: DEFAULT_QUOTE
+    color: {r: 0.054901965, g: 0.03529412, b: 0.18823531, a: 1}

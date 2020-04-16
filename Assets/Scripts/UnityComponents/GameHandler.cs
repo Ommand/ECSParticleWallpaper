@@ -69,17 +69,12 @@ namespace UnityComponents
                 if (_samplerTexture && !_samplerTexture.name.StartsWith(DefaultTextures.DefaultPrefix))
                     Destroy(_samplerTexture);
 
-                if (settingsTextureId.StartsWith(DefaultTextures.DefaultPrefix))
-                    _samplerTexture = Globals.TextureDataService.LoadDefaultTexture(settingsTextureId);
-                else
+                Globals.TextureDataService.LoadTexture(settingsTextureId, texture2D =>
                 {
-                    Globals.TextureDataService.LoadTexture(settingsTextureId, texture2D =>
-                    {
-                        _samplerTexture = texture2D;
-                        ApplySettings(settingsModel, false);
-                    });
-                    return;
-                }
+                    _samplerTexture = texture2D ? texture2D : Texture2D.whiteTexture;
+                    ApplySettings(settingsModel, false);
+                });
+                return;
             }
 
             if (!_samplerTexture) return;

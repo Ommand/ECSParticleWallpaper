@@ -17,19 +17,14 @@ namespace TextureDataService
 
         private static string GetFileName(string id)
         {
-            return Path.Combine(Application.persistentDataPath, id);
+            return id.StartsWith(DefaultTextures.DefaultPrefix)
+                ? Path.Combine(Application.streamingAssetsPath, id)
+                : Path.Combine(Application.persistentDataPath, id);
         }
 
         public void LoadTexture(string id, Action<Texture2D> onComplete)
         {
             Globals.CoroutinProcessor.StartCoroutine(LoadImageCoroutine(id, onComplete));
-        }
-
-        public Texture2D LoadDefaultTexture(string id)
-        {
-            var texture = Resources.Load<Texture2D>(id) ?? Texture2D.whiteTexture;
-            texture.name = id;
-            return texture;
         }
 
         private static IEnumerator LoadImageCoroutine(string id, Action<Texture2D> onComplete)
