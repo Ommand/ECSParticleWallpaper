@@ -133,6 +133,8 @@ GameObject:
   - component: {fileID: 111279093}
   - component: {fileID: 111279092}
   - component: {fileID: 111279091}
+  - component: {fileID: 111279095}
+  - component: {fileID: 111279094}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -249,6 +251,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111279089}
   m_CullTransparentMesh: 0
+--- !u!114 &111279094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111279089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e468e32c3de4e7418da406b118e109f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _time: 0.5
+  _count: 5
+  _playOnStart: 1
+--- !u!114 &111279095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111279089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &336100592
 GameObject:
   m_ObjectHideFlags: 0
