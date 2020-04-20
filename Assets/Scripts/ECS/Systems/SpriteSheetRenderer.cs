@@ -35,8 +35,9 @@ namespace ECS.Systems
 
                 for (var i = meshCount; i < meshCount + batchSize; i++)
                 {
-                    _matrixList.Add(animationData[i].matrix);
-                    _colorList.Add(animationData[i].color);
+                    var particleData = animationData[i];
+                    _matrixList.Add(particleData.matrix);
+                    _colorList.Add(particleData.color);
                 }
             
                 materialPropertyBlock.SetVectorArray(shaderPropertyId, _colorList);
