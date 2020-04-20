@@ -14,9 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _items:
   - name: DEFAULT_MAP
-    color: {r: 0.0627451, g: 0.0627451, b: 0.0627451, a: 1}
-  - name: DEFAULT_MAP2
-    color: {r: 0.3764706, g: 0.3764706, b: 0.3764706, a: 1}
+    color: {r: 0.13725491, g: 0.13725491, b: 0.13725491, a: 1}
   - name: DEFAULT_DOCTOR
     color: {r: 0.16078432, g: 0.09803922, b: 0.2901961, a: 1}
   - name: DEFAULT_QUOTE

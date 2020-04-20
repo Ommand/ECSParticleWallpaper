@@ -8724,13 +8724,7 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Map2
       m_Image: {fileID: 0}
-    - m_Text: Map3
-      m_Image: {fileID: 0}
     - m_Text: Doctor
-      m_Image: {fileID: 0}
-    - m_Text: Map4
-      m_Image: {fileID: 0}
-    - m_Text: Map5
       m_Image: {fileID: 0}
     - m_Text: Quote
       m_Image: {fileID: 0}
