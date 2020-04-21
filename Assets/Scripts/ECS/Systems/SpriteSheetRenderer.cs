@@ -2,8 +2,8 @@
 using ECS.Components;
 using Unity.Collections;
 using Unity.Entities;
+using Unity.IL2CPP.CompilerServices;
 using Unity.Mathematics;
-using UnityComponents;
 using UnityEngine;
 using UnityEngine.Rendering;
 using Utils;
@@ -16,6 +16,10 @@ namespace ECS.Systems
         private const int BatchCount = 1023;
         private readonly List<Matrix4x4> _matrixList = new List<Matrix4x4>(BatchCount);
         private readonly List<Vector4> _colorList = new List<Vector4>(BatchCount);
+        
+        [Il2CppSetOption(Option.NullChecks, false)]
+        [Il2CppSetOption(Option.ArrayBoundsChecks, false)]
+        [Il2CppSetOption(Option.DivideByZeroChecks, false)]
         protected override void OnUpdate()
         {
             var materialPropertyBlock = new MaterialPropertyBlock();
