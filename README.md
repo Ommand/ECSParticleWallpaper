@@ -6,7 +6,7 @@ Physics-based Unity ECS particles wallpaper
 
 This repository contains a Unity project that converts a png image to a physics-based particle system, and implements high-performance render that uses GPU Instancing.
 
-You can set the built package as a desktop wallpaper using the [Wallpaper Engine](https://store.steampowered.com/app/431960/Wallpaper_Engine/)
+You can set the built package as a desktop wallpaper using the [Wallpaper Engine](https://store.steampowered.com/app/431960/Wallpaper_Engine/): [link](https://steamcommunity.com/sharedfiles/filedetails/?id=2068292161).
 
 ![alt text](Res/gif2.gif "Owl")
 
