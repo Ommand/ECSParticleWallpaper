@@ -7,7 +7,7 @@ namespace Utils
 {
     public static class Globals
     {
-        public const float MinRepulsionDist = 0.06f;
+        public const float MinRepulsionDist = 0.04f;
         
         public static Rect WorldScreenViewport { get; set; }
         public static Mesh Quad { get; set; }

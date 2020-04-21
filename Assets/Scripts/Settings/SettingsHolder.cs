@@ -32,14 +32,14 @@ namespace Settings
         public static SettingsModel DefaultSettingsModel => new SettingsModel
         {
             MSAA = QualitySettings.antiAliasing,
-            Attraction = 5,
-            Repulsion = 1,
+            Attraction = 7,
+            Repulsion = 0.4f,
             Damping = 2,
-            ParticlesScale = 0.04f,
+            ParticlesScale = 0.02f,
             TargetFramerate = 60,
             BackgroundColor = Camera.main.backgroundColor,
             TextureId = DefaultTextures.DefaultMap,
-            RepulsionMode = SettingsModel.RepulsionModes.Segment
+            RepulsionMode = SettingsModel.RepulsionModes.Point
         };
     }
 }
